@@ -18,7 +18,9 @@
   }));
 
   function fmtSize(b) {
-    return b >= 1048576 ? (b / 1048576).toFixed(2) + ' MB' : Math.max(1, Math.round(b / 1024)) + ' KB';
+    if (b >= 1048576) return (b / 1048576).toFixed(2) + ' MB';
+    if (b >= 102400) return Math.round(b / 1024) + ' KB';
+    return (b / 1024).toFixed(1) + ' KB';
   }
 
   function addFiles(files) {
