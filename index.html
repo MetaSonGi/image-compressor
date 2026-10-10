@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>이미지 압축기</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="top">
+  <div>
+    <h1>🗜️ 이미지 압축기</h1>
+    <p class="sub">사진 용량을 확 줄이자 — 전부 브라우저 안에서, 서버 전송 없음</p>
+  </div>
+</header>
+
+<section class="panel">
+  <div id="dropZone" class="drop-zone">
+    <div class="drop-icon">📥</div>
+    <p><b>이미지를 드래그</b>하거나 클릭해서 선택 (여러 장 가능)</p>
+    <p class="hint">JPG / PNG / WebP</p>
+    <input type="file" id="fileInput" accept="image/*" multiple hidden />
+  </div>
+</section>
+
+<section class="panel settings">
+  <div class="set-row">
+    <label>저장 형식
+      <select id="outFmt">
+        <option value="image/webp">WebP (가장 작음)</option>
+        <option value="image/jpeg">JPG</option>
+        <option value="image/png">PNG (무손실)</option>
+      </select>
+    </label>
+    <label>품질 <b id="qVal">80</b>
+      <input type="range" id="quality" min="10" max="100" value="80" />
+    </label>
+    <label>최대 너비(px)
+      <input type="number" id="maxW" value="1920" min="320" max="4096" step="10" />
+    </label>
+  </div>
+  <div class="total-bar">
+    <span id="totalInfo">이미지를 넣어주세요</span>
+    <button id="downloadAll" class="btn primary" disabled>⬇ 전체 다운로드</button>
+  </div>
+</section>
+
+<main class="panel">
+  <div id="fileList" class="file-list"></div>
+</main>
+
+<footer>100% 클라이언트 사이드 — 이미지가 서버로 전송되지 않습니다</footer>
+<script src="app.js"></script>
+</body>
+</html>
