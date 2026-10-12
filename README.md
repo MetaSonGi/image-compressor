@@ -1,8 +1,16 @@
-# 이미지 압축기
+# 🗜️ 이미지 압축기 | Image Compressor
+
+> 일괄 압축 — WebP/JPG/PNG 변환, 품질·크기 조절  
+> Batch image compression with quality and size control
+
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen?style=flat-square)](https://metasongi.github.io/image-compressor/) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square)
+
+🌐 **Live:** https://metasongi.github.io/image-compressor/
+
+---
 
 사진 용량을 확 줄이는 웹앱 — 블로그·스토어·문서 등록용.
 
-🌐 **바로 실행:** https://metasongi.github.io/image-compressor/
 
 ## 기능
 
@@ -16,3 +24,9 @@
 
 - Vanilla JS + Canvas 2D
 - 100% 클라이언트 사이드 (서버 전송 없음)
+
+---
+
+## English Summary
+
+Batch image compression with quality and size control.
